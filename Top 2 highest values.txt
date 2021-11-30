@@ -1,0 +1,25 @@
+public class List {
+            public void printTwoMaxNumbers(int[] nums){
+                int maxOne = 0,maxTwo =0;
+
+                for(int n:nums){
+                    if(maxOne < n){
+                        maxTwo = maxOne;
+                        maxOne =n;
+                    } else if(maxTwo < n){
+                        maxTwo = n;
+                    }
+                }
+                System.out.println("First Max Number: "+maxOne);
+                System.out.println("Second Max Number: "+maxTwo);
+            }
+
+            public static void main(String a[]){
+                int num[] = {11, 22, 45, 92, 21, 54, 79, 11};
+                List tmn = new List();
+                tmn.printTwoMaxNumbers(num);
+            }
+        }
+
+
+
